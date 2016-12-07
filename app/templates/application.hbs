@@ -1,0 +1,11 @@
+{{#if session.isAuthenticated}}
+    <ul>
+        <li>Provider: {{session.data.authenticated.provider}}</li>
+        <li>GitHub Token: {{session.data.authenticated.access_token}}</li>
+    </ul>
+    <button {{action 'logout'}}>Logout</button>
+{{else}}
+    <button {{action 'login'}}>Login</button>
+{{/if}}
+
+{{outlet}}
