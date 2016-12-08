@@ -6,9 +6,6 @@ export default Ember.Controller.extend({
   actions: {
     logout() {
       this.get('session').invalidate();
-    },
-    login() {
-      this.get('session').authenticate('authenticator:torii', 'github');
     }
   }
 });
