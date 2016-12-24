@@ -1,7 +1,7 @@
 {
-  "name": "github-time-machine",
+  "name": "git-time-machine",
   "version": "0.0.0",
-  "description": "Small description for github-time-machine goes here",
+  "description": "Timeline-based history browser for git",
   "private": true,
   "directories": {
     "doc": "doc",
