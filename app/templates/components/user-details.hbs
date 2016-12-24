@@ -1,0 +1,11 @@
+<h2>{{user.name}} ({{user.login}})</h2>
+<img width="120px" height="120px" src={{user.avatarUrl}} />
+
+{{#power-select
+        options=user.githubRepositories
+        selected=selected
+        onchange=(action "selectRepo")
+        placeholder="Choose a repo"
+        as |repo|}}
+    {{repo.name}}
+{{/power-select}}

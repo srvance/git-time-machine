@@ -1,2 +1,16 @@
-<h1>{{model.name}} ({{model.login}})</h1>
-<img width="120px" height="120px" src={{model.avatarUrl}} />
+<nav>
+    {{#if model.avatarUrl}}
+        {{#link-to 'index'}}
+            <img width="40px" height="40px" src={{model.avatarUrl}} />
+        {{/link-to}}
+        {{input value=targetUser enter="specifyUser"}}
+    {{/if}}
+
+    {{#if session.isAuthenticated}}
+        <button onclick={{action 'logout'}}>Logout</button>
+    {{/if}}
+</nav>
+
+{{user-details user=model}}
+
+{{outlet}}
