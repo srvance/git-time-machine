@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'github-time-machine',
+    modulePrefix: 'git-time-machine',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
