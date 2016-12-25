@@ -1,6 +1,6 @@
 <nav>
     {{#if model.avatarUrl}}
-        {{#link-to 'index'}}
+        {{#link-to 'index.-'}}
             <img width="40px" height="40px" src={{model.avatarUrl}} />
         {{/link-to}}
         {{input value=targetUser enter="specifyUser"}}
@@ -10,7 +10,5 @@
         <button onclick={{action 'logout'}}>Logout</button>
     {{/if}}
 </nav>
-
-{{user-details user=model}}
 
 {{outlet}}
