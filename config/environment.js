@@ -1,7 +1,7 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'git-time-machine',
     environment: environment,
     rootURL: '/',
@@ -26,8 +26,6 @@ module.exports = function(environment) {
       sessionServiceName: 'session',
       providers: {
         'github-oauth2': {
-          apiKey: '95539b9b3b6a56981aab',
-          redirectUri: 'http://localhost:4200',
           scope: 'repo user'
         }
       }
@@ -40,6 +38,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.torii.providers['github-oauth2'].apiKey = '95539b9b3b6a56981aab';
+    ENV.torii.providers['github-oauth2'].redirectUri = 'http://localhost:4200';
     ENV.torii.providers['github-oauth2'].tokenExchangeUri = 'https://cbm6vfsk75.execute-api.us-east-1.amazonaws.com/dev/github-time-machine-authorizer';
   }
 
