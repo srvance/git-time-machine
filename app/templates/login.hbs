@@ -1,7 +1,7 @@
 {{#if loading}}
     Loading ...
 {{else}}
-    <button {{action 'authenticateWithGithub'}}>Login with Github</button>
+    <button onclick={{action 'authenticateWithGithub'}}>Login with Github</button>
 {{/if}}
 {{#if errorMessage}}
     <p>Error {{errorMessage}}</p>
