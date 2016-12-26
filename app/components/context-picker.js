@@ -1,5 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'nav'
+  session: Ember.inject.service(),
+  tagName: 'nav',
+
+  actions: {
+    logout() {
+      this.get('session').invalidate();
+    }
+  }
 });

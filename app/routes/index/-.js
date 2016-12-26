@@ -4,5 +4,9 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model() {
     return this.modelFor('index');
+  },
+
+  afterModel(model) {
+    this.transitionTo('index.user', model.get('login'));
   }
 });

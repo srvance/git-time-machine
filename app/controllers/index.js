@@ -5,9 +5,6 @@ export default Ember.Controller.extend({
   targetUser: '',
   selected: null,
   actions: {
-    logout() {
-      this.get('session').invalidate();
-    },
     specifyUser() {
       this.transitionToRoute('index.user', this.get('targetUser'));
     },
