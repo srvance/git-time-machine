@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
     },
     specifyRepo(repo) {
       console.log(`Controller action: ${repo.get('fullName')}`);
+      this.transitionToRoute('index.user.repo', repo.get('owner.login'), repo.get('name'));
     }
   }
 });

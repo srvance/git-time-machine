@@ -1,0 +1,12 @@
+Repository: {{model.selectedRepo.fullName}}
+
+<ul>
+    <li>Name: {{model.selectedRepo.name}}</li>
+    <li>Language: {{model.selectedRepo.language}}</li>
+    <li>Description: {{model.selectedRepo.description}}</li>
+    <li>Fork: {{model.selectedRepo.fork}}</li>
+    <li>Private: {{model.selectedRepo.private}}</li>
+    <li>Created: {{model.selectedRepo.createdAt}}</li>
+</ul>
+
+{{outlet}}
