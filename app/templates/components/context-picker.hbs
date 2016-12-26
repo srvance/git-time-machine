@@ -1,8 +1,17 @@
-{{#if defaultUser.avatarUrl}}
-    {{#link-to 'index.user' defaultUser.login}}
-        <img width="40px" height="40px" src={{defaultUser.avatarUrl}} />
+{{#if context.defaultUser.avatarUrl}}
+    {{#link-to 'index.user' context.defaultUser.login}}
+        <img width="40px" height="40px" src={{context.defaultUser.avatarUrl}} />
     {{/link-to}}
-    {{input value=targetUser enter=specifyUser}}
+    {{input value=context.targetUser enter=(action "changeUser" context.targetUser)}}
+
+    {{#power-select
+            options=context.selectedUser.githubRepositories
+            selected=selected
+            onchange=(action "changeRepo")
+            placeholder="Choose a repo"
+            as |repo|}}
+        {{repo.name}}
+    {{/power-select}}
 {{/if}}
 
 {{#if session.isAuthenticated}}

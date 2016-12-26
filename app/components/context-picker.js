@@ -7,6 +7,13 @@ export default Ember.Component.extend({
   actions: {
     logout() {
       this.get('session').invalidate();
+    },
+    changeUser(newUser) {
+      this.get('onChangeUser')(newUser);
+    },
+    changeRepo(newRepo) {
+      this.set('selected', newRepo);
+      this.get('onChangeRepo')(newRepo);
     }
   }
 });
