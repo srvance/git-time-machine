@@ -1,5 +1,7 @@
 # Git Time Machine
 
+[![Build Status](https://travis-ci.org/srvance/git-time-machine.svg?branch=master)](https://travis-ci.org/srvance/git-time-machine)
+
 ![Git Time Machine](./images/Time Machine.jpg)
 
 This application takes a different approach to browsing git history. Rather than
