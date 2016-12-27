@@ -12,6 +12,17 @@
             as |repo|}}
         {{repo.name}}
     {{/power-select}}
+
+    {{#if selectedRepo}}
+        {{#power-select
+                options=context.selectedRepo.branches
+                selected=selectedBranch
+                onchange=(action "changeBranch")
+                placeholder="Choose a branch"
+                as | branch | }}
+            {{branch.name}}
+        {{/power-select}}
+    {{/if}}
 {{/if}}
 
 {{#if session.isAuthenticated}}

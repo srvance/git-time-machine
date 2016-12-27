@@ -14,6 +14,10 @@ export default Ember.Component.extend({
     changeRepo(newRepo) {
       this.set('selected', newRepo);
       this.get('onChangeRepo')(newRepo);
+    },
+    changeBranch(newBranch) {
+      console.log(`Branch change to ${newBranch.get('name')}`);
+      this.set('selectedBranch', newBranch);
     }
   }
 });
