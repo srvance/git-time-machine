@@ -1,0 +1,11 @@
+{{context-picker
+        targetUser=targetUser
+        selectedRepo=model.selectedRepo
+        context=model
+        onChangeUser=(action "specifyUser")
+        onChangeRepo=(action "specifyRepo")
+}}
+
+{{repo-details repo=model.selectedRepo}}
+
+{{outlet}}

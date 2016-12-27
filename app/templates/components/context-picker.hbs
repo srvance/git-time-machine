@@ -6,7 +6,7 @@
 
     {{#power-select
             options=context.selectedUser.githubRepositories
-            selected=selected
+            selected=selectedRepo
             onchange=(action "changeRepo")
             placeholder="Choose a repo"
             as |repo|}}
