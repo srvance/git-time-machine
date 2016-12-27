@@ -6,19 +6,30 @@ moduleForComponent('user-details', 'Integration | Component | user details', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  const user = {
+    name: 'Stephen Vance',
+    login: 'srvance',
+    type: 'User',
+    publicRepos: 17,
+    publicGists: 5,
+    followers: 3,
+    following: 11,
+    createdAt: 'tomorrow',
+    url: 'https://github.com/srvance'
+  };
 
-  this.render(hbs`{{user-details}}`);
+  this.set('selectedUser', user);
 
-  assert.equal(this.$().text().trim(), '');
+  this.render(hbs`{{user-details user=selectedUser}}`);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#user-details}}
-      template block text
-    {{/user-details}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(),
+`Name: ${user.name}
+    Login: ${user.login}
+    Type: ${user.type}
+    Public repos: ${user.publicRepos}
+    Public gists: ${user.publicGists}
+    Followers: ${user.followers}
+    Following: ${user.following}
+    Created: ${user.createdAt}
+    Profile URL: ${user.url}`);
 });

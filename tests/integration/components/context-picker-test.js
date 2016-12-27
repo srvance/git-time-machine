@@ -13,13 +13,4 @@ test('it renders', function(assert) {
   this.render(hbs`{{context-picker}}`);
 
   assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#context-picker}}
-      template block text
-    {{/context-picker}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
 });

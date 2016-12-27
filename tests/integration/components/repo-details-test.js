@@ -6,20 +6,31 @@ moduleForComponent('repo-details', 'Integration | Component | repo details', {
 });
 
 test('it renders', function(assert) {
-
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
+  const repo = {
+    fullName: 'user/repo',
+    name: 'repo',
+    language: 'JavaScript',
+    description: 'A repo',
+    fork: false,
+    private: false,
+    createdAt: 'dawn'
+  };
 
-  this.render(hbs`{{repo-details}}`);
+  this.set('selectedRepo', repo);
 
-  assert.equal(this.$().text().trim(), '');
+  this.render(hbs`{{repo-details repo=selectedRepo}}`);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#repo-details}}
-      template block text
-    {{/repo-details}}
-  `);
+  assert.equal(this.$().text().trim(),
+`Repository: ${repo.fullName}
 
-  assert.equal(this.$().text().trim(), 'template block text');
+
+    Name: ${repo.name}
+    Language: ${repo.language}
+    Description: ${repo.description}
+    Fork: ${repo.fork}
+    Private: ${repo.private}
+    Created: ${repo.createdAt}`
+  );
 });
