@@ -18,6 +18,7 @@ export default Ember.Component.extend({
     changeBranch(newBranch) {
       console.log(`Branch change to ${newBranch.get('name')}`);
       this.set('selectedBranch', newBranch);
+      this.get('onChangeBranch')(newBranch);
     }
   }
 });

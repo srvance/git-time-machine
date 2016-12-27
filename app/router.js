@@ -11,7 +11,8 @@ Router.map(function() {
   this.route('index', { path: '/' }, function() {
     this.route('-');
     this.route('user', { path: ':user_id' } );
-    this.route('repo', { path: ':user_id/:repo_id'} );
+    this.route('repo', { path: ':user_id/:repo_id' } );
+    this.route('branch', { path: ':user_id/:repo_id/:branch_id' } );
   });
 });
 

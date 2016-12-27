@@ -1,12 +1,13 @@
 {{context-picker
         targetUser=targetUser
         selectedRepo=model.selectedRepo
+        selectedBranch=model.selectedBranch
         context=model
         onChangeUser=(action "specifyUser")
         onChangeRepo=(action "specifyRepo")
         onChangeBranch=(action "specifyBranch")
 }}
 
-{{repo-details repo=model.selectedRepo}}
+Branch {{model.selectedBranch.name}}
 
 {{outlet}}
