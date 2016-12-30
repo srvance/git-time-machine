@@ -2,26 +2,41 @@
     {{#link-to 'index.user' context.defaultUser.login}}
         <img width="40px" height="40px" src={{context.defaultUser.avatarUrl}} />
     {{/link-to}}
-    {{input value=model.targetUser enter=(action "changeUser" model.targetUser)}}
 
-    {{#power-select
-            options=model.selectedUser.githubRepositories
-            selected=selectedRepo
-            onchange=(action "changeRepo")
-            placeholder="Choose a repo"
-            as |repo|}}
-        {{repo.name}}
-    {{/power-select}}
+    {{input value=model.targetUser enter=(action "changeUser" model.targetUser)}}
+    /
+    {{#bs-dropdown as | dd | }}
+        {{#bs-button}}
+            {{if selectedRepo selectedRepo.name "Choose a repo"}}
+        {{/bs-button}}
+        {{dd.button}}
+        {{#dd.menu}}
+            {{#each model.selectedUser.githubRepositories as | repo | }}
+                {{#dd.item}}
+                    {{#link-to "index.repo" model.selectedUser.login repo.name}}
+                        {{repo.name}}
+                    {{/link-to}}
+                {{/dd.item}}
+            {{/each}}
+        {{/dd.menu}}
+    {{/bs-dropdown}}
 
     {{#if selectedRepo}}
-        {{#power-select
-                options=model.selectedRepo.branches
-                selected=selectedBranch
-                onchange=(action "changeBranch")
-                placeholder="Choose a branch"
-                as | branch | }}
-            {{branch.name}}
-        {{/power-select}}
+        {{#bs-dropdown as | dd | }}
+            {{#bs-button}}
+                {{if selectedBranch selectedBranch.name "Choose a branch"}}
+            {{/bs-button}}
+            {{dd.button}}
+            {{#dd.menu}}
+                {{#each model.selectedRepo.branches as | branch | }}
+                    {{#dd.item}}
+                        {{#link-to "index.branch" model.selectedUser.login selectedRepo.name branch.name}}
+                            {{branch.name}}
+                        {{/link-to}}
+                    {{/dd.item}}
+                {{/each}}
+            {{/dd.menu}}
+        {{/bs-dropdown}}
     {{/if}}
 {{/if}}
 
