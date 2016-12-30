@@ -2,10 +2,10 @@
     {{#link-to 'index.user' context.defaultUser.login}}
         <img width="40px" height="40px" src={{context.defaultUser.avatarUrl}} />
     {{/link-to}}
-    {{input value=context.targetUser enter=(action "changeUser" context.targetUser)}}
+    {{input value=model.targetUser enter=(action "changeUser" model.targetUser)}}
 
     {{#power-select
-            options=context.selectedUser.githubRepositories
+            options=model.selectedUser.githubRepositories
             selected=selectedRepo
             onchange=(action "changeRepo")
             placeholder="Choose a repo"
@@ -15,7 +15,7 @@
 
     {{#if selectedRepo}}
         {{#power-select
-                options=context.selectedRepo.branches
+                options=model.selectedRepo.branches
                 selected=selectedBranch
                 onchange=(action "changeBranch")
                 placeholder="Choose a branch"

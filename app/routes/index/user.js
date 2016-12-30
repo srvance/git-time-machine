@@ -6,8 +6,12 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model(params) {
     return RSVP.hash({
       targetUser: params.user_id,
-      defaultUser: this.modelFor('index'),
+      defaultUser: this.get('context.defaultUser'),
       selectedUser: this.get('store').findRecord('github-user', params.user_id)
     });
+  },
+
+  afterModel(model) {
+    this.set('context.user', model);
   }
 });

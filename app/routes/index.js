@@ -7,6 +7,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   },
 
   afterModel(model) {
+    this.get('context').set('defaultUser', model);
     this.transitionTo('index.user', model.get('login'));
   }
 });
