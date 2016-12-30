@@ -3,8 +3,9 @@
         <img width="40px" height="40px" src={{context.defaultUser.avatarUrl}} />
     {{/link-to}}
 
+    <div class="input-group">
     {{input value=model.targetUser enter=(action "changeUser" model.targetUser)}}
-    /
+    <span class="input-group-addon">/</span>
     {{#bs-dropdown as | dd | }}
         {{#bs-button}}
             {{if selectedRepo selectedRepo.name "Choose a repo"}}
@@ -20,6 +21,7 @@
             {{/each}}
         {{/dd.menu}}
     {{/bs-dropdown}}
+    </div>
 
     {{#if selectedRepo}}
         {{#bs-dropdown as | dd | }}
@@ -41,5 +43,5 @@
 {{/if}}
 
 {{#if session.isAuthenticated}}
-    <button onclick={{action 'logout'}}>Logout</button>
+    {{#bs-button onclick=(action 'logout')}}Logout{{/bs-button}}
 {{/if}}
