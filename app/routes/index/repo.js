@@ -9,5 +9,5 @@ export default Ember.Route.extend({
       selectedUser: this.get('store').findRecord('github-user', params.user_id),
       selectedRepo: this.get('store').findRecord('github-repository', `${params.user_id}/${params.repo_id}`)
     });
-  },
+  }
 });
