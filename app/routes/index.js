@@ -8,6 +8,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
   redirect(model) {
     // TODO: How can I make sure this only happens when there are no child routes?
-    this.transitionTo('index.user', model.get('login'));
+    if(window.location.pathname === '/') {
+      this.transitionTo('index.user', model.get('login'));
+    }
   }
 });
