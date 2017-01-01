@@ -1,10 +1,8 @@
-{{context-picker
+{{user-repo-selector
+        defaultUser=defaultUser
         targetUser=targetUser
-        model=model
-        onChangeUser=(action "specifyUser")
-        onChangeRepo=(action "specifyRepo")
+        currentUser=currentUser
+        currentRepo=currentRepo
 }}
-
-{{user-details user=model.selectedUser}}
 
 {{outlet}}

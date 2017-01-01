@@ -12,5 +12,5 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{branch-selector}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'Choose a branch');
 });

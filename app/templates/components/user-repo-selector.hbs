@@ -1,4 +1,4 @@
-{{#link-to 'user' defaultUser.login}}
+{{#link-to 'index.user' defaultUser.login}}
     <img width="40px" height="40px" src={{defaultUser.avatarUrl}} />
 {{/link-to}}
 
@@ -7,13 +7,13 @@
     <span class="input-group-addon">/</span>
     {{#bs-dropdown as | dd | }}
         {{#bs-button}}
-            {{if selectedRepo selectedRepo.name "Choose a repo"}}
+            {{if currentRepo currentRepo.name "Choose a repo"}}
         {{/bs-button}}
         {{dd.button}}
         {{#dd.menu}}
             {{#each currentUser.githubRepositories as | repo | }}
                 {{#dd.item}}
-                    {{#link-to "user.repo" currentUser.login repo.name}}
+                    {{#link-to "index.user.repo" currentUser.login repo.name}}
                         {{repo.name}}
                     {{/link-to}}
                 {{/dd.item}}

@@ -6,8 +6,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     return this.get('store').findRecord('github-user', '#');
   },
 
-  afterModel(model) {
-    this.get('context').set('defaultUser', model);
+  redirect(model) {
+    // TODO: How can I make sure this only happens when there are no child routes?
     this.transitionTo('index.user', model.get('login'));
   }
 });

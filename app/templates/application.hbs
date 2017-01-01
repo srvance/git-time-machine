@@ -1,3 +1,7 @@
-<h1>Git Time Machine</h1>
+Git Time Machine
+
+{{#if session.isAuthenticated}}
+    {{#bs-button onClick=(route-action 'logout')}}Logout{{/bs-button}}
+{{/if}}
 
 {{outlet}}

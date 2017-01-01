@@ -8,11 +8,12 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
-  this.route('index', { path: '/' }, function() {
-    this.route('-');
-    this.route('user', { path: ':user_id' } );
-    this.route('repo', { path: ':user_id/:repo_id' } );
-    this.route('branch', { path: ':user_id/:repo_id/:branch_id' } );
+  this.route('index', { path: '/' }, function () {
+    this.route('user', { path: ':user_id' }, function() {
+      this.route('repo', { path: ':repo_id' }, function() {
+        this.route('branch', { path: ':branch_id' } );
+      });
+    });
   });
 });
 
