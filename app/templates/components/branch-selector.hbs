@@ -6,7 +6,7 @@
     {{#dd.menu}}
         {{#each currentRepo.branches as | branch | }}
             {{#dd.item}}
-                {{#link-to "index.user.repo.branch" currentUser.login currentRepo.name branch.name}}
+                {{#link-to "index.user.repo.branch" currentUser currentRepo branch.name}}
                     {{branch.name}}
                 {{/link-to}}
             {{/dd.item}}

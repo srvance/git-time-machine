@@ -13,7 +13,7 @@
         {{#dd.menu}}
             {{#each currentUser.githubRepositories as | repo | }}
                 {{#dd.item}}
-                    {{#link-to "index.user.repo" currentUser.login repo.name}}
+                    {{#link-to "index.user.repo" currentUser repo.name}}
                         {{repo.name}}
                     {{/link-to}}
                 {{/dd.item}}
