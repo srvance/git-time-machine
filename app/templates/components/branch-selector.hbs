@@ -1,0 +1,15 @@
+{{#bs-dropdown as | dd | }}
+    {{#bs-button}}
+        {{if selectedBranch selectedBranch.name "Choose a branch"}}
+    {{/bs-button}}
+    {{dd.button}}
+    {{#dd.menu}}
+        {{#each currentRepo.branches as | branch | }}
+            {{#dd.item}}
+                {{#link-to "user.repo.branch" currentUser.login currentRepo.name branch.name}}
+                    {{branch.name}}
+                {{/link-to}}
+            {{/dd.item}}
+        {{/each}}
+    {{/dd.menu}}
+{{/bs-dropdown}}
