@@ -11,7 +11,9 @@ Router.map(function() {
   this.route('index', { path: '/' }, function () {
     this.route('user', { path: ':user_id' }, function() {
       this.route('repo', { path: ':repo_id' }, function() {
-        this.route('branch', { path: ':branch_id' } );
+        this.route('branch', { path: ':branch_id' }, function() {
+          this.route('path', { path: '*path'});
+        });
       });
     });
   });
