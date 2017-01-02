@@ -4,11 +4,5 @@ import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-rout
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model() {
     return this.get('store').findRecord('github-user', '#');
-  },
-
-  redirect(model) {
-    if(window.location.pathname === '/') {
-      this.transitionTo('index.user', model.get('login'));
-    }
   }
 });
