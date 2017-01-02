@@ -22,6 +22,13 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    resizeServiceDefaults: {
+      debounceTimeout    : 200,
+      heightSensitive    : true,
+      widthSensitive     : true,
+      injectionFactories : [ 'view', 'component']
+    },
+
     torii: {
       sessionServiceName: 'session',
       providers: {
