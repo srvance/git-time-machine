@@ -1,3 +1,16 @@
-Branch {{currentBranch.name}} <br />
+{{#split-view isVertical=true splitPercentage=25 as | split |}}
+    {{#split.child class="split-pane-border"}}
+        {{branch-selector
+                currentUser=currentUser
+                currentRepo=currentRepo
+                selectedBranch=currentBranch
+        }}
+        Tree view
+    {{/split.child}}
+    {{split.sash}}
+    {{#split.child}}
+        {{outlet}}
+    {{/split.child}}
+{{/split-view}}
 
 {{outlet}}

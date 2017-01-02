@@ -1,17 +1,1 @@
-{{#split-view isVertical=true splitPercentage=25 as | split |}}
-    {{#split.child class="split-pane-border"}}
-        {{branch-selector
-                currentUser=currentUser
-                currentRepo=currentRepo
-                selectedBranch=selectedBranch
-        }}
-        Tree view
-    {{/split.child}}
-    {{split.sash}}
-    {{#split.child}}
-        File content <br />
-        {{outlet}}
-    {{/split.child}}
-{{/split-view}}
-
 {{outlet}}
