@@ -11,7 +11,7 @@ export default Ember.Route.extend({
 
   setupController(controller, model) {
     controller.set('currentUser', this.modelFor('index.user'));
-    controller.set('currentBranch', this.modelFor('index.user.branch'));
+    controller.set('currentRepo', this.modelFor('index.user.repo'));
     controller.set('currentBranch', model);
   }
 });

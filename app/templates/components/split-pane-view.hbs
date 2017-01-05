@@ -1,0 +1,16 @@
+{{#split-view isVertical=true splitPercentage=25 as | split |}}
+    {{#split.child}}
+        {{branch-selector
+                currentUser=currentUser
+                currentRepo=currentRepo
+                selectedBranch=currentBranch
+        }}
+        <div class="gtm-tree-view">
+            Tree view
+        </div>
+    {{/split.child}}
+    {{split.sash}}
+    {{#split.child}}
+        {{outlet}}
+    {{/split.child}}
+{{/split-view}}
