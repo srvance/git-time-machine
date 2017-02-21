@@ -1,6 +1,8 @@
 # Git Time Machine
 
 [![Build Status](https://travis-ci.org/srvance/git-time-machine.svg?branch=master)](https://travis-ci.org/srvance/git-time-machine)
+[![Dependency Status](https://david-dm.org/srvance/git-time-machine/status.svg)](https://david-dm.org/srvance/git-time-machine) 
+[![devDependency Status](https://david-dm.org/srvance/git-time-machine/dev-status.svg)](https://david-dm.org/srvance/git-time-machine?type=dev)
 
 ![Git Time Machine](./images/Time Machine.jpg)
 
