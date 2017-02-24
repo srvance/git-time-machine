@@ -25,9 +25,11 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap-sass": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
-    "ember-bootstrap": "https://github.com/srvance/ember-bootstrap#add-bs4",
+    "ember-bootstrap": "https://github.com/kaliber5/ember-bootstrap#bs4",
     "ember-cli": "2.10.0",
     "ember-cli-app-version": "^2.0.0",
     "ember-cli-babel": "^5.1.7",

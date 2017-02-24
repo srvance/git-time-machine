@@ -6,17 +6,16 @@
     {{input value=targetUser enter=(route-action "changeUser" targetUser)}}
     <span class="input-group-addon">/</span>
     {{#bs-dropdown as | dd | }}
-        {{#bs-button}}
+        {{#dd.button}}
             {{if currentRepo currentRepo.name "Choose a repo"}}
-        {{/bs-button}}
-        {{dd.button}}
-        {{#dd.menu}}
+        {{/dd.button}}
+        {{#dd.menu as | menu |}}
             {{#each currentUser.githubRepositories as | repo | }}
-                {{#dd.item}}
+                {{#menu.item}}
                     {{#link-to "index.user.repo" currentUser repo.name}}
                         {{repo.name}}
                     {{/link-to}}
-                {{/dd.item}}
+                {{/menu.item}}
             {{/each}}
         {{/dd.menu}}
     {{/bs-dropdown}}
