@@ -46,7 +46,7 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "^2.9.0",
     "ember-data-github": "https://github.com/srvance/ember-data-github#add-contents",
-    "ember-export-application-global": "^1.0.5",
+    "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^0.6.3",
     "ember-resolver": "^3.0.0",
     "ember-route-action-helper": "2.0.2",
