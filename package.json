@@ -42,7 +42,7 @@
     "ember-cli-release": "^0.2.9",
     "ember-cli-sass": "5.6.0",
     "ember-cli-sri": "^2.1.0",
-    "ember-cli-test-loader": "^1.1.0",
+    "ember-cli-test-loader": "^2.0.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "^2.9.0",
     "ember-data-github": "https://github.com/srvance/ember-data-github#add-contents",
