@@ -47,7 +47,7 @@
     "ember-data": "^2.9.0",
     "ember-data-github": "https://github.com/srvance/ember-data-github#add-contents",
     "ember-export-application-global": "^1.0.5",
-    "ember-load-initializers": "^0.6.3",
+    "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^3.0.0",
     "ember-route-action-helper": "2.0.2",
     "ember-simple-auth": "1.2.1",
