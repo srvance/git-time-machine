@@ -53,6 +53,6 @@
     "ember-simple-auth": "1.2.1",
     "ember-split-view": "https://github.com/srvance/ember-split-view.git#master",
     "loader.js": "^4.0.10",
-    "torii": "0.8.1"
+    "torii": "0.8.2"
   }
 }
