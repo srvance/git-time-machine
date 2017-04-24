@@ -6,7 +6,8 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'ember-bootstrap': {
       importBootstrapCSS: false,
-      bootstrapVersion: 4
+      bootstrapVersion: 4,
+      'importBootstrapFont': false
     }
   });
 
