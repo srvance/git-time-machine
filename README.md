@@ -5,7 +5,7 @@
 
 # Git Time Machine
 
-![Git Time Machine](./images/Time Machine.jpg)
+![Git Time Machine](/images/Time Machine.jpg)
 
 This application takes a different approach to browsing git history. Rather than
 browsing through commit logs or using `git bisect` to find where particular
