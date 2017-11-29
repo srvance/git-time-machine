@@ -30,7 +30,7 @@
     "ember-ajax": "^3.0.0",
     "ember-bootstrap": "^1.0.0-alpha.12",
     "ember-cli": "2.12.3",
-    "ember-cli-app-version": "^3.0.0",
+    "ember-cli-app-version": "^3.1.2",
     "ember-cli-babel": "^6.0.0",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-htmlbars": "^2.0.1",
