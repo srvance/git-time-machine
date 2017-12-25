@@ -27,23 +27,23 @@ any git implementations with an API.
 
 You will need the following things properly installed on your computer.
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/)
+* [Yarn](https://yarnpkg.com/)
+* [Ember CLI](https://ember-cli.com/)
+* [Google Chrome](https://google.com/chrome/)
 
 ## Installation
 
 * `git clone https://github.com/srvance/git-time-machine` this repository
 * `cd git-time-machine`
-* `npm install`
-* `bower install`
+* `yarn install`
 
 ## Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 ### Running Tests
 
@@ -57,7 +57,7 @@ You will need the following things properly installed on your computer.
 
 ### Deploying
 
-TBD
+`ember deploy production`
 
 ### Contributing
 
