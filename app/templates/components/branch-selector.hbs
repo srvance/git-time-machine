@@ -4,11 +4,9 @@
     {{/dd.button}}
     {{#dd.menu as | menu |}}
         {{#each currentRepo.branches as | branch | }}
-            {{#menu.item}}
-                {{#link-to "index.user.repo.branch" currentUser currentRepo branch.name}}
-                    {{branch.name}}
-                {{/link-to}}
-            {{/menu.item}}
+            {{#menu.link-to "index.user.repo.branch" currentUser currentRepo branch.name}}
+                {{branch.name}}
+            {{/menu.link-to}}
         {{/each}}
     {{/dd.menu}}
 {{/bs-dropdown}}

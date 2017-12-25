@@ -1,8 +1,7 @@
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('adapter:github-user', 'Unit | Adapter | github user', {
-  // Specify the other units that are required for this test.
-  // needs: ['serializer:foo']
+  needs: ['service:session']
 });
 
 // Replace this with your real tests.
