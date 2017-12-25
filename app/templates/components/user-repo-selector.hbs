@@ -11,11 +11,9 @@
         {{/dd.button}}
         {{#dd.menu as | menu |}}
             {{#each currentUser.githubRepositories as | repo | }}
-                {{#menu.item}}
-                    {{#link-to "index.user.repo" currentUser repo.name}}
-                        {{repo.name}}
-                    {{/link-to}}
-                {{/menu.item}}
+                {{#menu.link-to "index.user.repo" currentUser repo.name}}
+                    {{repo.name}}
+                {{/menu.link-to}}
             {{/each}}
         {{/dd.menu}}
     {{/bs-dropdown}}
