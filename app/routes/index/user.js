@@ -15,7 +15,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
   actions: {
     changeUser(newUser) {
-      console.log(`Change to user ${newUser}`);
       this.transitionTo('index.user', newUser);
     }
   }
