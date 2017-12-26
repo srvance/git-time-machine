@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model(params) {
     let repo = this.modelFor('index.user.repo').get('fullName');
     return this.get('store').queryRecord('github-branch', {

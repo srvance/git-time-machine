@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model(params) {
     let user_id = this.paramsFor('index.user').user_id;
     return this.get('store').findRecord('github-repository', `${user_id}/${params.repo_id}`);
