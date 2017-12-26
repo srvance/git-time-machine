@@ -1,11 +1,11 @@
-import Ember from 'ember';
+import { inject as service } from '@ember/service';
 import ToriiAuthenticator from 'ember-simple-auth/authenticators/torii';
 import config from '../config/environment';
 
 // TODO: Should invalidate() revoke the access token in GitHub?
 export default ToriiAuthenticator.extend({
-  torii: Ember.inject.service(),
-  ajax: Ember.inject.service(),
+  torii: service(),
+  ajax: service(),
 
   authenticate() {
     const ajax = this.get('ajax');
