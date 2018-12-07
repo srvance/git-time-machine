@@ -45,7 +45,7 @@
     "ember-resolver": "^4.0.0",
     "ember-route-action-helper": "2.0.6",
     "ember-simple-auth": "^1.4.1",
-    "ember-source": "~2.17.0",
+    "ember-source": "~3.6.0",
     "ember-split-view": "^1.1.0",
     "loader.js": "^4.2.3",
     "torii": "0.9.6"
